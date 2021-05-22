@@ -1,0 +1,367 @@
+// Cores
+$azulBranco: #96B9FD;
+$azulBebe: #7BA4FC;
+$azulFusca: #5081FB;
+$azulMarinho: #051D3B;
+
+body {
+  background-color: $azulMarinho;
+  font-family: 'Inter', sans-serif;
+}
+
+.header{
+  display: flex;
+  background: $azulMarinho;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__logo {
+    margin: 0 1.3vw;
+  }
+
+  .header__searchBar {
+    border-radius: 8px;
+    width: 50%;
+    align-self: stretch;
+    padding: .5vw;
+    margin: 1vw 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.16);
+    outline: none;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  .header__profile {
+    display: flex;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 8px;
+    margin: .5vw .5vw 0 0;
+
+    .header__profilePic {
+      border-radius: 200px;
+      width: 2em;
+      margin-right: 1em;
+    }
+
+    .header__profileName {
+      color: white;
+    }
+  }
+
+  .header__profile:hover {
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+  }
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  width: 25%;
+  background-color: $azulMarinho;
+
+  .menu__title {
+    margin: 1.5vw;
+    color: white;
+    margin-bottom: 1vw;
+    font-size: .73em;
+    letter-spacing: .4em;
+  }
+
+  .menu__itemList {
+    margin-left: 1.5vw;
+    .menu__itemList__item {
+      margin: .5vw 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu__itemList__icon {
+      margin-right: 1em;
+    }
+
+    .menu__itemList__link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.textEditor {
+  background-color: $azulMarinho;
+  width: 50%;
+
+  .textEditor__bgArea {
+    background-color: #6BD1FF;
+    padding: 2vw;
+    border-radius: 8px;
+
+    .textEditor__bgArea__inputArea {
+      background-color: black;
+      border-radius: 8px;
+      padding: 1vw;
+
+      .textEditor__bgArea__inputArea__ball--red {
+        height: 1em;
+        width: 1em;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+        position:static;
+      }
+
+      .textEditor__bgArea__inputArea__ball--orange {
+        height: 1em;
+        width: 1em;
+        background-color: orange;
+        border-radius: 50%;
+        display: inline-block;
+        position:static;
+        margin: 0 .2em;
+      }
+
+      .textEditor__bgArea__inputArea__ball--green {
+        height: 1em;
+        width: 1em;
+        background-color: green;
+        border-radius: 50%;
+        display: inline-block;
+        position: static;
+      }
+
+      .textEditor__bgArea__inputArea__input {
+        background-color: black;
+        color: white;
+        resize: none;
+        border: none;
+        margin: .5vw 0;
+        outline: none;
+        width: 100%;
+      }
+    }
+  }
+  .textEditor__button {
+    width: 100%;
+    margin: 2vw 0;
+    background: rgba(80, 129, 251, 0.08);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1vw;
+    transition: .5s;
+  }
+
+  .textEditor__button:hover {
+    cursor: pointer;
+    background: rgba(80, 129, 251, 0.24);
+  }
+
+  .textEditor__button:active {
+    background: rgba(80, 129, 251, 0.24);
+    border: 5px solid rgba(80, 129, 251, 0.16);
+    transition: .1s;
+  }
+
+  .textEditor__button:focus {
+    background: rgba(80, 129, 251, 0.24);
+
+  }
+}
+
+.projectManager {
+  width: 25%;
+  background-color: $azulMarinho;
+  color: white;
+
+  ::placeholder{
+    color: white;
+  }
+
+  .projectManager__form {
+    margin: 0 2vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    .projectManager__form__title{
+      font-size: .73em;
+      letter-spacing: .4em;
+    }
+
+    .projectManager__form__name {
+      padding: 1em;
+      align-self: stretch;
+      margin: .1vw 0 0;
+      background: rgba(255, 255, 255, 0.16);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      outline: none;
+      transition: .5s;
+
+    }
+
+    .projectManager__form__description {
+      align-self: stretch;
+      padding: 1em;
+      resize: none;
+      margin: .1vw 0 1vw;
+      background: rgba(255, 255, 255, 0.16);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      outline: none;
+      transition: .5s;
+
+    }
+
+    .projectManager__form__dropdownLangs{
+      align-self: stretch;
+      padding: 1em;
+      background: rgba(255, 255, 255, 0.16);
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      color: white;
+      transition: .5s;
+    }
+
+    .projectManager__form__name:hover, .projectManager__form__description:hover, .projectManager__form__dropdownLangs:hover {
+      background: rgba(255, 255, 255, 0.24);
+      cursor: pointer;
+    }
+
+    .projectManager__form__dropdownLangs__option {
+      color: black;
+
+    }
+
+    .projectManager__form__colorPicker {
+      width: auto;
+      height: 40px;
+      align-self: stretch;
+      background-color: $azulMarinho;
+      border: 1px solid white;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .projectManager__form__colorPicker:hover {
+      cursor: pointer;
+    }
+
+    .projectManager__form__button {
+      align-self: stretch;
+      padding: 1em;
+      background-color: $azulFusca;
+      border: none;
+      border-radius: 8px;
+      margin: 1vw 0;
+      transition: .5s;
+    }
+
+    .projectManager__form__button:hover {
+      background-color: $azulBebe;
+      cursor: pointer;
+    }
+
+    .projectManager__form__button:active {
+      border: 5px solid $azulFusca;
+      transition: .1s;
+    }
+
+    .projectManager__form__button:focus {
+      background-color: $azulBranco;
+    }
+  }
+}
+
+// Media qs
+// mobile
+@media only screen and (max-width: 768px) {
+  .header {
+
+    .header__logo {
+      margin: 1em 1em 2em;
+    }
+
+    .header__searchBar{
+      display: none;
+    }
+
+    .header__profile {
+      display: none;
+    }
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .textEditor {
+    width: 100%;
+    max-width: 100%;
+
+    .textEditor__bgArea{
+      padding: 1.5em;
+      margin: 0 1em;
+
+      .textEditor__bgArea__inputArea {
+        padding: 1em;
+      }
+    }
+
+    .textEditor__button {
+      padding: 1em;
+      margin: 1em 0 2em;
+    }
+  }
+
+  .projectManager {
+    width: 100%;
+
+    .projectManager__form {
+
+      .projectManager__form__title {
+        margin-left: .5em;
+      }
+
+      .projectManager__form__name {
+        margin: .5em .5em 0;
+      }
+
+      .projectManager__form__description {
+        margin: 1em .5em 2em;
+      }
+
+      .projectManager__form__dropdownLangs {
+        margin: .5em;
+      }
+
+      .projectManager__form__colorPicker {
+        margin: .5em .5em 1em;
+      }
+
+      .projectManager__form__button {
+        margin: .5em;
+      }
+
+    }
+  }
+}
+
+// tablet

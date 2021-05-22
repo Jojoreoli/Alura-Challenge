@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraDEV</title>
+    <link rel="stylesheet" href="./assets/style/css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style/css/style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="./assets/imgs/Logo.svg" class="header__logo" alt="Logo da AluraDev">
+      <input type="text" name="searchBar" placeholder="Busque por algo" class="header__searchBar">
+      <figure class="header__profile">
+        <img src="./assets/imgs/profilePic.jpg" alt="" class="header__profilePic">
+        <figcaption class="header__profileName">Gato Banana</figcaption>
+      </figure>
+    </header>
+
+    <main class="main">
+      <nav class="menu">
+        <h2 class="menu__title">MENU</h2>
+        <ul class="menu__itemList">
+          <li class="menu__itemList__item">
+            <a href="#">
+              <img src="./assets/imgs/Editor.svg" alt="Ícone do Editor de Código" class="menu__itemList__icon">
+            </a>
+            <a class="menu__itemList__link" href="#">
+              Editor de código
+            </a>
+          </li>
+          <li class="menu__itemList__item">
+            <a  href="#">
+              <img src="./assets/imgs/Comunidade.svg" alt="Ícone da Comunidade" class="menu__itemList__icon">
+            </a>
+            <a class="menu__itemList__link" href="#">
+              Comunidade
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="textEditor">
+        <div class="textEditor__bgArea">
+          <div class="textEditor__bgArea__inputArea">
+            <span class="textEditor__bgArea__inputArea__ball--red"></span>
+            <span class="textEditor__bgArea__inputArea__ball--orange"></span>
+            <span class="textEditor__bgArea__inputArea__ball--green"></span>
+            <textarea name="textEditor" rows="15" class="textEditor__bgArea__inputArea__input"></textarea>
+          </div>
+        </div>
+        <button type="button" name="Visualizar" class="textEditor__button">Visualizar com o highlight</button>
+      </section>
+
+      <aside class="projectManager">
+        <form class="projectManager__form" action="index.html" method="post">
+
+          <label class="projectManager__form__title">SEU PROJETO</label>
+          <input type="text" name="name" placeholder="Nome do seu projeto" class="projectManager__form__name">
+          <textarea name="name" placeholder="Descrição do seu projeto" class="projectManager__form__description"></textarea>
+
+          <label class="projectManager__form__title">PERSONALIZAÇÃO</label>
+          <select class="projectManager__form__dropdownLangs" name="languages">
+            <option class="projectManager__form__dropdownLangs__option">JavaScript</option>
+            <option class="projectManager__form__dropdownLangs__option">HTML</option>
+            <option class="projectManager__form__dropdownLangs__option">CSS</option>
+          </select>
+          <input type="color" name="color" class="projectManager__form__colorPicker" value="#6BD1FF">
+
+          <button type="button" name="save" class="projectManager__form__button">Salvar projeto</button>
+
+        </form>
+      </aside>
+
+    </main>
+  </body>
+</html>
