@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/style/css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/455065b29e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/style/css/style.css">
   </head>
 
@@ -14,6 +15,12 @@
     <header class="header">
       <img src="./assets/imgs/Logo.svg" class="header__logo" alt="Logo da AluraDev">
       <input type="text" name="searchBar" placeholder="Busque por algo" class="header__searchBar">
+      <button type="button" name="button" class="iconButton">
+        <i class="fas fa-search"></i>
+      </button>
+      <button type="button" name="button" class="iconButton">
+        <i class="fas fa-bars"></i>
+      </button>
       <figure class="header__profile">
         <img src="./assets/imgs/profilePic.jpg" alt="" class="header__profilePic">
         <figcaption class="header__profileName">Gato Banana</figcaption>
@@ -52,7 +59,10 @@
             <textarea name="textEditor" rows="15" class="textEditor__bgArea__inputArea__input"></textarea>
           </div>
         </div>
-        <button type="button" name="Visualizar" class="textEditor__button">Visualizar com o highlight</button>
+        <div class="textEditor__buttonDiv">
+          <button type="button" name="Visualizar" class="textEditor__button">Visualizar com o highlight</button>
+
+        </div>
       </section>
 
       <aside class="projectManager">
@@ -63,12 +73,15 @@
           <textarea name="name" placeholder="Descrição do seu projeto" class="projectManager__form__description"></textarea>
 
           <label class="projectManager__form__title">PERSONALIZAÇÃO</label>
-          <select class="projectManager__form__dropdownLangs" name="languages">
-            <option class="projectManager__form__dropdownLangs__option">JavaScript</option>
-            <option class="projectManager__form__dropdownLangs__option">HTML</option>
-            <option class="projectManager__form__dropdownLangs__option">CSS</option>
-          </select>
-          <input type="color" name="color" class="projectManager__form__colorPicker" value="#6BD1FF">
+
+          <div class="projectManager__customize">
+            <select class="projectManager__form__dropdownLangs" name="languages">
+              <option class="projectManager__form__dropdownLangs__option">JavaScript</option>
+              <option class="projectManager__form__dropdownLangs__option">HTML</option>
+              <option class="projectManager__form__dropdownLangs__option">CSS</option>
+            </select>
+            <input type="color" name="color" class="projectManager__form__colorPicker" value="#6BD1FF">
+          </div>
 
           <button type="button" name="save" class="projectManager__form__button">Salvar projeto</button>
 

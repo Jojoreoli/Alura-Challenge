@@ -10,6 +10,23 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.header .fa-search {
+  display: none;
+}
+.header .fa-bars {
+  display: none;
+}
+.header .iconButton {
+  background: none;
+  border: none;
+  display: none;
+}
+.header .iconButton:hover {
+  background: rgba(80, 129, 251, 0.08);
+}
+.header .iconButton:active {
+  background: rgba(80, 129, 251, 0.16);
+}
 .header .header__logo {
   margin: 0 1.3vw;
 }
@@ -22,6 +39,7 @@ body {
   border: none;
   background-color: rgba(255, 255, 255, 0.16);
   outline: none;
+  color: white;
 }
 .header ::placeholder {
   color: white;
@@ -192,6 +210,11 @@ body {
   outline: none;
   transition: 0.5s;
 }
+.projectManager .projectManager__form .projectManager__customize {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .projectManager .projectManager__form .projectManager__form__dropdownLangs {
   align-self: stretch;
   padding: 1em;
@@ -201,6 +224,7 @@ body {
   outline: none;
   color: white;
   transition: 0.5s;
+  margin-bottom: 1em;
 }
 .projectManager .projectManager__form .projectManager__form__name:hover, .projectManager .projectManager__form .projectManager__form__description:hover, .projectManager .projectManager__form .projectManager__form__dropdownLangs:hover {
   background: rgba(255, 255, 255, 0.24);
@@ -243,6 +267,86 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .header .iconButton {
+    display: inline;
+  }
+  .header .fa-bars {
+    display: inline;
+    color: white;
+    margin-right: 4vw;
+  }
+  .header .header__logo {
+    margin: 1em 1em 2em;
+  }
+  .header .header__searchBar {
+    align-self: center;
+    padding: 1em;
+  }
+  .header .header__profile {
+    display: none;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .textEditor {
+    width: 100%;
+    max-width: 100%;
+  }
+  .textEditor .textEditor__bgArea {
+    padding: 1.5em;
+    margin: 0 1em;
+  }
+  .textEditor .textEditor__bgArea .textEditor__bgArea__inputArea {
+    padding: 1em;
+  }
+  .textEditor .textEditor__buttonDiv {
+    margin: 0 1em;
+  }
+  .textEditor .textEditor__buttonDiv .textEditor__button {
+    padding: 1em;
+    margin: 1em 0 2em;
+  }
+
+  .projectManager {
+    width: 100%;
+    max-width: 100%;
+  }
+  .projectManager .projectManager__form .projectManager__form__title {
+    margin: 2em 0 1em;
+  }
+  .projectManager .projectManager__form .projectManager__form__name {
+    margin-bottom: 1em;
+  }
+  .projectManager .projectManager__form .projectManager__customize {
+    flex-direction: row;
+    width: 100%;
+  }
+  .projectManager .projectManager__form .projectManager__customize .projectManager__form__dropdownLangs {
+    width: 50%;
+  }
+  .projectManager .projectManager__form .projectManager__customize .projectManager__form__colorPicker {
+    width: 50%;
+    margin-left: 1em;
+  }
+  .projectManager .projectManager__form .projectManager__form__button {
+    margin-top: 2em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    justify-content: space-around;
+  }
+  .header .fa-search {
+    display: inline;
+    color: white;
+    margin-left: 5vw;
+  }
   .header .header__logo {
     margin: 1em 1em 2em;
   }
@@ -272,7 +376,10 @@ body {
   .textEditor .textEditor__bgArea .textEditor__bgArea__inputArea {
     padding: 1em;
   }
-  .textEditor .textEditor__button {
+  .textEditor .textEditor__buttonDiv {
+    margin: 0 1em;
+  }
+  .textEditor .textEditor__buttonDiv .textEditor__button {
     padding: 1em;
     margin: 1em 0 2em;
   }
@@ -289,11 +396,17 @@ body {
   .projectManager .projectManager__form .projectManager__form__description {
     margin: 1em 0.5em 2em;
   }
-  .projectManager .projectManager__form .projectManager__form__dropdownLangs {
-    margin: 0.5em;
+  .projectManager .projectManager__form .projectManager__customize {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  .projectManager .projectManager__form .projectManager__form__colorPicker {
-    margin: 0.5em 0.5em 1em;
+  .projectManager .projectManager__form .projectManager__customize .projectManager__form__dropdownLangs {
+    width: 100%;
+  }
+  .projectManager .projectManager__form .projectManager__customize .projectManager__form__colorPicker {
+    margin: 1em 0;
+    width: 98%;
   }
   .projectManager .projectManager__form .projectManager__form__button {
     margin: 0.5em;

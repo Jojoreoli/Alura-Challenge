@@ -16,6 +16,30 @@ body {
   align-items: center;
   justify-content: space-between;
 
+  .fa-search {
+    display: none;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .iconButton {
+    background: none;
+    border: none;
+    display: none;
+  }
+
+  .iconButton:hover {
+    background: rgba(80, 129, 251, 0.08);
+
+  }
+
+  .iconButton:active {
+    background: rgba(80, 129, 251, 0.16);
+
+  }
+
   .header__logo {
     margin: 0 1.3vw;
   }
@@ -29,6 +53,7 @@ body {
     border: none;
     background-color: rgba(255, 255, 255, 0.16);
     outline: none;
+    color: white;
   }
 
   ::placeholder {
@@ -148,6 +173,7 @@ body {
       }
     }
   }
+
   .textEditor__button {
     width: 100%;
     margin: 2vw 0;
@@ -225,6 +251,12 @@ body {
 
     }
 
+    .projectManager__customize {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
     .projectManager__form__dropdownLangs{
       align-self: stretch;
       padding: 1em;
@@ -234,6 +266,7 @@ body {
       outline: none;
       color: white;
       transition: .5s;
+      margin-bottom: 1em;
     }
 
     .projectManager__form__name:hover, .projectManager__form__description:hover, .projectManager__form__dropdownLangs:hover {
@@ -287,9 +320,109 @@ body {
 }
 
 // Media qs
-// mobile
+// tablet
 @media only screen and (max-width: 768px) {
   .header {
+
+    .iconButton {
+      display: inline;
+    }
+
+    .fa-bars {
+      display: inline;
+      color: white;
+      margin-right: 4vw;
+    }
+
+    .header__logo {
+      margin: 1em 1em 2em;
+    }
+
+    .header__searchBar{
+      align-self: center;
+      padding: 1em;
+    }
+
+    .header__profile {
+      display: none;
+    }
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .textEditor {
+    width: 100%;
+    max-width: 100%;
+
+    .textEditor__bgArea{
+      padding: 1.5em;
+      margin: 0 1em;
+
+      .textEditor__bgArea__inputArea {
+        padding: 1em;
+      }
+    }
+
+    .textEditor__buttonDiv{
+      margin:0 1em;
+
+      .textEditor__button {
+        padding: 1em;
+        margin: 1em 0 2em;
+      }
+    }
+  }
+
+  .projectManager {
+    width: 100%;
+    max-width: 100%;
+
+    .projectManager__form {
+      .projectManager__form__title {
+        margin: 2em 0 1em;
+      }
+
+      .projectManager__form__name{
+        margin-bottom: 1em;
+      }
+
+      .projectManager__customize {
+        flex-direction: row;
+        width: 100%;
+
+        .projectManager__form__dropdownLangs{
+          width: 50%;
+        }
+
+        .projectManager__form__colorPicker {
+          width: 50%;
+          margin-left: 1em;
+        }
+      }
+
+      .projectManager__form__button {
+        margin-top: 2em;
+      }
+    }
+  }
+}
+
+// mobile
+@media only screen and (max-width: 480px) {
+  .header {
+    justify-content: space-around;
+
+    .fa-search {
+      display: inline;
+      color: white;
+      margin-left: 5vw;
+    }
 
     .header__logo {
       margin: 1em 1em 2em;
@@ -325,9 +458,13 @@ body {
       }
     }
 
-    .textEditor__button {
-      padding: 1em;
-      margin: 1em 0 2em;
+    .textEditor__buttonDiv{
+      margin:0 1em;
+
+      .textEditor__button {
+        padding: 1em;
+        margin: 1em 0 2em;
+      }
     }
   }
 
@@ -348,13 +485,23 @@ body {
         margin: 1em .5em 2em;
       }
 
-      .projectManager__form__dropdownLangs {
-        margin: .5em;
+      .projectManager__customize {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .projectManager__form__dropdownLangs {
+          width: 100%;
+
+        }
+
+        .projectManager__form__colorPicker {
+          margin: 1em 0;
+          width: 98%;
+        }
       }
 
-      .projectManager__form__colorPicker {
-        margin: .5em .5em 1em;
-      }
+
 
       .projectManager__form__button {
         margin: .5em;
@@ -363,5 +510,3 @@ body {
     }
   }
 }
-
-// tablet
